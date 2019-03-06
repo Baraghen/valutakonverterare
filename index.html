@@ -29,28 +29,28 @@
 <body>
     <header>Pengakonverterarna</header>
     <div>
-        <input type="text" placeholder="Skriv in ett belopp" id="summa" onchange="test()">
+        <input type="text" placeholder="Skriv in ett belopp" id="fråga" onchange="tillConvert()">
     </div>
     <div>
         <select id="valutaEtt">
-                <option value="SEK">Svenska krona</option>
-                <option value="NOK">Norska krona</option>
-                <option value="DKK">Danska krona</option>
-                <option value="USD">Amerikanska dollar</option>
-                <option value="GBP">Pund sterling</option>
-            </select>
-        </div>
-    </div>    
+            <option value="1">Svenska krona</option>
+            <option value="2">Amerikanska dollar</option>
+            <option value="0.5">Norska krona</option>
+            <option value="1.5">Danska krona</option>
+            <option value="2.5">Pund sterling</option>
+        </select>
+    </div>
+</div>    
     <div>
-        <input type="text" placeholder="Skriv in ett belopp" id="svar">
+        <input type="text" placeholder="Skriv in ett belopp" id="svar" onchange="frånConvert()">
     </div>
     <div>
         <select id="valutaTvå">
-            <option value="SEK">Svenska krona</option>
-            <option value="NOK">Norska krona</option>
-            <option value="DKK">Danska krona</option>
-            <option value="USD">Amerikanska dollar</option>
-            <option value="GBP">Pund sterling</option>
+            <option value="1">Svenska krona</option>
+            <option value="2">Amerikanska dollar</option>
+            <option value="0.5">Norska krona</option>
+            <option value="1.5">Danska krona</option>
+            <option value="2.5">Pund sterling</option>
         </select>
     </div>
 </body>
