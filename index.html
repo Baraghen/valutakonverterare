@@ -22,36 +22,39 @@
                     }
                 }
             }
-            );
-            </script>
+        );
+    </script>
     <title>Pengakonverterarna</title>
 </head>
 <body>
-    <header>Pengakonverterarna</header>
-    <div>
-        <input type="text" placeholder="Skriv in ett belopp" id="fråga" onchange="tillConvert()">
-    </div>
-    <div>
-        <select id="valutaEtt">
-            <option value="1">Svenska krona</option>
-            <option value="2">Amerikanska dollar</option>
-            <option value="0.5">Norska krona</option>
-            <option value="1.5">Danska krona</option>
-            <option value="2.5">Pund sterling</option>
-        </select>
-    </div>
-</div>    
-    <div>
-        <input type="text" placeholder="Skriv in ett belopp" id="svar" onchange="frånConvert()">
-    </div>
-    <div>
-        <select id="valutaTvå">
-            <option value="1">Svenska krona</option>
-            <option value="2">Amerikanska dollar</option>
-            <option value="0.5">Norska krona</option>
-            <option value="1.5">Danska krona</option>
-            <option value="2.5">Pund sterling</option>
-        </select>
+    <header>
+        <h1>Pengakonverterarna</h1>
+    </header>
+    <div class="wrapper">
+        <div id="frågaTest">
+            <input type="text" placeholder="Skriv in ett belopp" id="fråga" onchange="tillConvert()" class="inputField">
+        </div>
+        <div id="dropTest1">
+            <select id="valutaEtt" class="dropDown">
+                <option value="1">Svenska krona</option>
+                <option value="2">Amerikanska dollar</option>
+                <option value="0.5">Norska krona</option>
+                <option value="1.5">Danska krona</option>
+                <option value="2.5">Pund sterling</option>
+            </select>
+        </div>  
+        <div id="svarTest">
+            <input type="text" placeholder="Skriv in ett belopp" id="svar" onchange="frånConvert()" class="inputField">
+        </div>
+        <div id="dropTest2">
+            <select id="valutaTvå" class="dropDown">
+                <option value="1">Svenska krona</option>
+                <option value="2">Amerikanska dollar</option>
+                <option value="0.5">Norska krona</option>
+                <option value="1.5">Danska krona</option>
+                <option value="2.5">Pund sterling</option>
+            </select>
+        </div>
     </div>
 </body>
 </html>
