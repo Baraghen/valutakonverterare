@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <script src="money.js"></script>
+        <script src="script.js"></script>
+    <script type="text/javascript">
+        $.getJSON(
+            'https://openexchangerates.org/api/latest.json?app_id=[7b09fbbde176485a994a1e43a2fb6a7b]',
+            function(data) {
+                if ( typeof fx !== "undefined" && fx.rates ) {
+                    fx.rates = data.rates;
+                    fx.base = data.base;
+                } else {
+                    // If not, apply to fxSetup global:
+                    var fxSetup = {
+                        rates : data.rates,
+                        base : data.base
+                    }
+                }
+            }
+            );
+            </script>
+    <title>Pengakonverterarna</title>
+</head>
+<body>
+    <header>Pengakonverterarna</header>
+    <div>
+        <input type="text" placeholder="Skriv in ett belopp" id="summa" onchange="test()">
+    </div>
+    <div>
+        <select id="valutaEtt">
+                <option value="SEK">Svenska krona</option>
+                <option value="NOK">Norska krona</option>
+                <option value="DKK">Danska krona</option>
+                <option value="USD">Amerikanska dollar</option>
+                <option value="GBP">Pund sterling</option>
+            </select>
+        </div>
+    </div>    
+    <div>
+        <input type="text" placeholder="Skriv in ett belopp" id="svar">
+    </div>
+    <div>
+        <select id="valutaTvå">
+            <option value="SEK">Svenska krona</option>
+            <option value="NOK">Norska krona</option>
+            <option value="DKK">Danska krona</option>
+            <option value="USD">Amerikanska dollar</option>
+            <option value="GBP">Pund sterling</option>
+        </select>
+    </div>
+</body>
+</html>
