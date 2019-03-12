@@ -5,26 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="style.css">
-        <script src="money.js"></script>
-        <script src="script.js"></script>
-    <script type="text/javascript">
-        $.getJSON(
-            'https://openexchangerates.org/api/latest.json?app_id=[7b09fbbde176485a994a1e43a2fb6a7b]',
-            function(data) {
-                if ( typeof fx !== "undefined" && fx.rates ) {
-                    fx.rates = data.rates;
-                    fx.base = data.base;
-                } else {
-                    // If not, apply to fxSetup global:
-                    var fxSetup = {
-                        rates : data.rates,
-                        base : data.base
-                    }
-                }
-            }
-        );
-    </script>
-    <title>Pengakonverterarna</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Pengakonverterarna</title>
 </head>
 <body>
     <header>
@@ -32,29 +14,20 @@
     </header>
     <div class="wrapper">
         <div id="frågaTest">
-            <input type="text" placeholder="Skriv in ett belopp" id="fråga" onchange="tillConvert()" class="inputField">
+            <input type="text" placeholder="Skriv in ett belopp" id="fråga" class="inputField" onkeyup="tillConvert()">
         </div>
-        <div id="dropTest1">
-            <select id="valutaEtt" class="dropDown">
-                <option value="1">Svenska krona</option>
-                <option value="2">Amerikanska dollar</option>
-                <option value="0.5">Norska krona</option>
-                <option value="1.5">Danska krona</option>
-                <option value="2.5">Pund sterling</option>
+        <div id="dropContainer1">
+            <select id="valutaDrop1" name="valuta" class="dropDown">
             </select>
         </div>  
         <div id="svarTest">
-            <input type="text" placeholder="Skriv in ett belopp" id="svar" onchange="frånConvert()" class="inputField">
+            <input type="text" placeholder="Skriv in ett belopp" id="svar" class="inputField" onkeyup="frånConvert()">
         </div>
-        <div id="dropTest2">
-            <select id="valutaTvå" class="dropDown">
-                <option value="1">Svenska krona</option>
-                <option value="2">Amerikanska dollar</option>
-                <option value="0.5">Norska krona</option>
-                <option value="1.5">Danska krona</option>
-                <option value="2.5">Pund sterling</option>
+        <div id="dropContainer2">
+            <select id="valutaDrop2" name="valuta" class="dropDown">
             </select>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
