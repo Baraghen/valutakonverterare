@@ -1,3 +1,5 @@
+// De två funktioner som gör själva uträkningen. Dem tar värdet från inputfältet och de två valda valutorna och för in dom i formeln.
+
 function tillConvert(){
     var x = document.getElementById("fråga").value;
     var y = document.getElementById("valutaDrop1").value;
@@ -11,6 +13,8 @@ function frånConvert(){
     var z = document.getElementById("valutaDrop2").value;
     document.getElementById("fråga").value = ((x*y)/z).toFixed(2);
 }
+
+// Här fylls båda dropdown menyerna med val. Det börjar med en "placeholder" och fylls sedan på med datan från api:t.
 
 let dropdown = document.getElementById("valutaDrop1")
 let dropdown2 = document.getElementById("valutaDrop2")

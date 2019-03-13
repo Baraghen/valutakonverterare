@@ -35,13 +35,13 @@ header h1{
     color: rgb(77, 77, 77);
 }
 
-#frågaTest{
+#frågaContainer{
     grid-column: 2;
     grid-row: 2;
     margin: auto;
 }
 
-#svarTest{
+#svarContainer{
     grid-column: 3;
     grid-row: 2;
     margin: auto;
@@ -74,5 +74,5 @@ header h1{
 }
 
 select, option{
-    padding-left: 155px;
+    padding-left: 165px;
 }
