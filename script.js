@@ -1,3 +1,5 @@
+// Funktion för knappen som ändrar språk på inputfälten samt dropdown menyn
+
 var inputF = document.getElementById("fråga");
 var inputS = document.getElementById("svar");
 
