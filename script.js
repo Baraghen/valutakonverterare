@@ -1,3 +1,27 @@
+var inputF = document.getElementById("fråga");
+var inputS = document.getElementById("svar");
+
+var drop1 = document.getElementById("valutaDrop1");
+var drop2 = document.getElementById("valutaDrop2");
+
+var btn = document.getElementById("btnLang");
+
+function langSwitch(){
+    if(inputF.placeholder === "Skriv in ett belopp"){
+        inputF.placeholder = "Enter an amount";
+        inputS.placeholder = "Enter an amount";
+        drop1[0].text = "Select Currency";
+        drop2[0].text = "Select Currency";
+        btn.innerHTML = "Sv";
+    }else{
+        inputF.placeholder = "Skriv in ett belopp";
+        inputS.placeholder = "Skriv in ett belopp";
+        drop1[0].text = "Välj Valuta";
+        drop2[0].text = "Välj Valuta";
+        btn.innerHTML = "Eng";
+    }
+}
+
 // De två funktioner som gör själva uträkningen. Dem tar värdet från inputfältet och de två valda valutorna och för in dom i formeln.
 
 function tillConvert(){

@@ -10,9 +10,16 @@
     </head>
 <body>
     <header>
-        <h1>Pengakonverterarna</h1>
+        <div class="wrapper">
+            <div id="btnContainer">
+                <button onclick="langSwitch()" id="btnLang" >Eng</button>
+            </div>
+            <div id="h1Container">
+                <h1>Pengakonverterarna</h1>
+            </div>
+        </div>
     </header>
-    <div class="wrapper">
+    <div class="wrapper2">
         <div id="frågaContainer">
             <input type="text" placeholder="Skriv in ett belopp" id="fråga" class="inputField" onkeyup="tillConvert()">
         </div>
